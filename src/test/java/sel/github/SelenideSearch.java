@@ -21,15 +21,11 @@ public class SelenideSearch {
     void shouldFindSelenideGitHub(){
        open("https://github.com/");
        $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
-       $$(".repo-list li").first().$("a").click();
+       $(".repo-list li a").click();
        $("#wiki-tab").click();
        $(".js-wiki-more-pages-link").click();
-       $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
        $(byText("SoftAssertions")).click();
        $("#wiki-content").shouldHave(text("JUnit5"));
-       //sleep(5000);
-       Selenide.closeWindow();
-       Selenide.closeWebDriver();
 
     }
 }
