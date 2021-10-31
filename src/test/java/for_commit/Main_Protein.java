@@ -24,7 +24,7 @@ public class Main_Protein {
         prot1.printAminoCount();
         prot2.printAmino();
 
-       //System.out.println(prot1.tip+" "+prot1.ves);
+       System.out.println(prot1.tip+" "+prot1.ves);
        // System.out.println(prot2.tip+" "+prot2.ves);
     }
 }
